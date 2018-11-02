@@ -1,0 +1,136 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrap > .top-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  background-color: #1CB3C3;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+  z-index: 100;
+}
+.wrap > .top-bar .top-botton {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+}
+.wrap > .top-bar .top-botton.left {
+  left: 0;
+}
+.wrap > .top-bar .top-botton.right {
+  right: 0;
+}
+.wrap > .content {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.wrap > .content .top-list {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  height: 7rem;
+  font-size: 1.2rem;
+  background-color: #1CB3C3;
+  transition: all 0.5s;
+}
+.wrap > .content .top-list .ul-box {
+  position: relative;
+  overflow: scroll;
+  height: 100%;
+}
+.wrap > .content .top-list .ul-box .list-ul {
+  width: 10000px;
+}
+.wrap > .content .top-list .ul-box .list-ul li {
+  text-align: center;
+  width: 6rem;
+  float: left;
+}
+.wrap > .content .top-list .ul-box .list-ul li .box {
+  padding: 0.5rem 0;
+}
+.wrap > .content .top-list .ul-box .list-ul li .box.on {
+  background: #fff;
+  color: #1CB3C3;
+  border-radius: 0.5rem;
+}
+.wrap > .content .top-list .more-day {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 0;
+  width: 7rem;
+  height: 100%;
+}
+.wrap > .content .top-list .more-day .cell {
+  width: 100%;
+  height: 5rem;
+  background-color: #1CB3C3;
+  border-left: 1px solid #fff;
+}
+.wrap > .content .main-list {
+  padding: 7rem 0;
+}
+.wrap > .content .main-list .box {
+  display: flex;
+  color: #aaa;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #aaa;
+}
+.wrap > .content .main-list .box .left {
+  padding: 1rem 2rem;
+  padding-top: 0.5rem;
+  padding-right: 0;
+  flex-grow: 10;
+}
+.wrap > .content .main-list .box .left .top {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap > .content .main-list .box .left .top .time {
+  display: block;
+  color: #333;
+  font-size: 2.1rem;
+}
+.wrap > .content .main-list .box .left .top .from {
+  text-align: left;
+}
+.wrap > .content .main-list .box .left .top .to {
+  text-align: right;
+}
+.wrap > .content .main-list .box .left .bottom .desc {
+  margin-top: 1rem;
+}
+.wrap > .content .main-list .box .right {
+  flex-grow: 2;
+  padding: 0.5rem 2rem;
+  padding-left: 0;
+  text-align: right;
+}
+.wrap > .content .main-list .box .right .price {
+  font-size: 2.1rem;
+  color: #E38B24;
+}
+.wrap > .content .main-list .box .right .desc {
+  font-size: 1.3rem;
+}
+.wrap > .content .main-list .box .right .tips {
+  display: inline-block;
+  padding: 0 0.2rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #E38B24;
+}

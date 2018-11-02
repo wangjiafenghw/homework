@@ -1,0 +1,147 @@
+@hd: 0.1rem;
+@bg: #1CB3C3;
+@font_desc_color: #aaa;
+@price_color: #E38B24;
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &>.top-bar{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45*@hd;
+        line-height: 45*@hd;
+        background-color: @bg;
+        text-align: center;
+        color: #fff;
+        font-size: 17*@hd;
+        z-index: 100;
+        .top-botton{
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            width: 40*@hd;
+            height: 40*@hd;
+            &.left{
+                left: 0;
+            }
+            &.right{
+                right: 0;
+            }
+        }
+    }
+    &>.content{
+        position: relative;
+        width: 100%;
+        height: auto;
+        .top-list{
+            position: absolute;
+            top: -70px;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            height: 70*@hd;
+            font-size: 12*@hd;
+            background-color: @bg;
+            transition: all 0.5s;
+            .ul-box{
+                position: relative;
+                overflow: scroll;
+                height: 100%;
+                .list-ul{
+                    width: 10000px;
+                    li{
+                        text-align: center;
+                        width: 60*@hd;
+                        float: left;
+                        .box{
+                            padding: 5*@hd 0;
+                            &.on{
+                                background: #fff;
+                                color: @bg;
+                                border-radius: 5*@hd;
+                            }
+                        }
+                        
+                    }
+                }
+                
+                
+            }
+            .more-day{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 5*@hd 0;
+                width: 70*@hd;
+                height: 100%;
+                
+                .cell{
+                    width: 100%;
+                    height: 50*@hd;
+                    background-color: @bg;
+                    border-left: 1px solid #fff;
+                }
+            }
+        }
+        .main-list{
+            padding: 70*@hd 0;
+            .box{
+                display: flex;
+                color: @font_desc_color;
+                font-size: 12*@hd;
+                border-bottom: 1px solid @font_desc_color;
+                .left{
+                    padding: 10*@hd 20*@hd;
+                    padding-top: 5*@hd;
+                    padding-right: 0;
+                    flex-grow: 10;
+                    .top{
+                        display: flex;
+                        justify-content: space-between;
+                        .time{
+                            display: block;
+                            color: #333;
+                            font-size: 21*@hd;
+                        }
+                        .from{
+                            text-align: left;
+                            
+                        }
+                        .to{
+                            text-align: right;
+                        }
+                    }
+                    .bottom{
+                        .desc{
+                            margin-top: 10*@hd;
+                        }
+                    }
+                }
+                .right{
+                    flex-grow: 2;
+                    padding: 5*@hd 20*@hd;
+                    padding-left: 0;
+                    text-align: right;
+                    .price{
+                        font-size: 21*@hd;
+                        color: @price_color;
+                    }
+                    .desc{
+                        font-size: 13*@hd;
+                    }
+                    .tips{
+                        display: inline-block;
+                        padding: 0 2*@hd;
+                        border-radius: 4*@hd;
+                        color: #fff;
+                        font-size: 12*@hd;
+                        background-color: @price_color;
+                    }
+                }
+            }
+        }
+    }
+}
