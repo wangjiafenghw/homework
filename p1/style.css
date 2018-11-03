@@ -1,7 +1,10 @@
+.iconfont {
+  font-size: 1.6rem;
+}
 .wrap {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 .wrap > .top-bar {
   position: sticky;
@@ -35,20 +38,23 @@
   height: auto;
 }
 .wrap > .content .top-list {
-  position: absolute;
-  top: -70px;
+  position: fixed;
+  top: -5rem;
   left: 0;
   width: 100%;
   color: #fff;
   height: 7rem;
   font-size: 1.2rem;
   background-color: #1CB3C3;
-  transition: all 0.5s;
+  -webkit-transition: top 0.5s;
+}
+.wrap > .content .top-list.on {
+  top: 4.5rem;
 }
 .wrap > .content .top-list .ul-box {
   position: relative;
   overflow: scroll;
-  height: 100%;
+  height: 70 0.1rem;
 }
 .wrap > .content .top-list .ul-box .list-ul {
   width: 10000px;
@@ -66,6 +72,11 @@
   color: #1CB3C3;
   border-radius: 0.5rem;
 }
+.wrap > .content .top-list .ul-box:after {
+  content: '00';
+  display: none;
+  clear: both;
+}
 .wrap > .content .top-list .more-day {
   position: absolute;
   top: 0;
@@ -75,12 +86,27 @@
   height: 100%;
 }
 .wrap > .content .top-list .more-day .cell {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 5rem;
   background-color: #1CB3C3;
+  align-items: center;
   border-left: 1px solid #fff;
+  text-align: center;
+}
+.wrap > .content .top-list .more-day .cell div {
+  width: 100%;
+}
+.wrap > .content .top-list .more-day .cell .img {
+  font-size: 2.4rem;
 }
 .wrap > .content .main-list {
+  overflow-y: scroll;
+  padding: 0rem 0;
+  -webkit-transition: padding 0.5s 0.3s;
+}
+.wrap > .content .main-list.on {
   padding: 7rem 0;
 }
 .wrap > .content .main-list .box {
@@ -133,4 +159,44 @@
   color: #fff;
   font-size: 1.2rem;
   background-color: #E38B24;
+}
+.wrap .bottom-list {
+  position: fixed;
+  bottom: -7rem;
+  left: 0;
+  width: 100vw;
+  height: 6rem;
+  border-top: 1px solid #aaa;
+  background-color: #fff;
+  -webkit-transition: bottom 0.5s;
+  z-index: 100;
+}
+.wrap .bottom-list.on {
+  bottom: 0rem;
+}
+.wrap .bottom-list .bottom-bar {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.wrap .bottom-list .bottom-bar .btn-bottom {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+}
+.wrap .bottom-list .bottom-bar .btn-bottom div {
+  width: 100%;
+}
+.wrap .bottom-list .bottom-bar .btn-bottom .box {
+  display: flex;
+  flex-direction: column;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+.wrap .bottom-list .bottom-bar .btn-bottom .box .img {
+  font-size: 1.8rem;
+}
+.wrap .bottom-list .bottom-bar .btn-bottom .box .name {
+  font-weight: bold;
 }

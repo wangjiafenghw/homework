@@ -2,10 +2,13 @@
 @bg: #1CB3C3;
 @font_desc_color: #aaa;
 @price_color: #E38B24;
+.iconfont{
+    font-size: 16*@hd;
+}
 .wrap{
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     &>.top-bar{
         position: sticky;
         top: 0;
@@ -37,19 +40,22 @@
         width: 100%;
         height: auto;
         .top-list{
-            position: absolute;
-            top: -70px;
+            position: fixed;
+            top: -50*@hd;
             left: 0;
             width: 100%;
             color: #fff;
             height: 70*@hd;
             font-size: 12*@hd;
             background-color: @bg;
-            transition: all 0.5s;
+            -webkit-transition: top 0.5s;
+            &.on{
+                top: 45*@hd;
+            }
             .ul-box{
                 position: relative;
                 overflow: scroll;
-                height: 100%;
+                height: 70@hd;
                 .list-ul{
                     width: 10000px;
                     li{
@@ -67,6 +73,11 @@
                         
                     }
                 }
+                &:after{
+                    content:'00';
+                    display: none;
+                    clear: both;
+                }
                 
                 
             }
@@ -78,21 +89,38 @@
                 width: 70*@hd;
                 height: 100%;
                 
+                
                 .cell{
+                    display: flex;
+                    flex-direction: column;
                     width: 100%;
                     height: 50*@hd;
                     background-color: @bg;
+                    align-items: center;
                     border-left: 1px solid #fff;
+                    text-align: center;
+                    div{
+                        width: 100%;
+                    }
+                    .img{
+                        font-size: 24*@hd;
+                    }
                 }
             }
         }
         .main-list{
-            padding: 70*@hd 0;
+            overflow-y: scroll;
+            padding: 0*@hd 0;
+            -webkit-transition: padding 0.5s 0.3s;
+            &.on{
+                padding: 70*@hd 0;
+            }
             .box{
                 display: flex;
                 color: @font_desc_color;
                 font-size: 12*@hd;
                 border-bottom: 1px solid @font_desc_color;
+                
                 .left{
                     padding: 10*@hd 20*@hd;
                     padding-top: 5*@hd;
@@ -139,6 +167,46 @@
                         color: #fff;
                         font-size: 12*@hd;
                         background-color: @price_color;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-list{
+        position: fixed;
+        bottom: -70*@hd;
+        left: 0;
+        width: 100vw;
+        height: 60*@hd;
+        border-top: 1px solid @font_desc_color;
+        background-color: #fff;
+        -webkit-transition: bottom 0.5s;
+        z-index: 100;
+        &.on{
+            bottom: 0*@hd;
+        }
+        .bottom-bar{
+            display: flex;
+            justify-content:space-around;
+            height: 100%;
+            .btn-bottom{
+                display: flex;
+                flex-grow: 1;
+                text-align: center;
+                align-items: center;
+                div{
+                    width: 100%;
+                }
+                .box{
+                    display: flex;
+                    flex-direction: column;
+                    color: @font_desc_color;
+                    font-size: 12*@hd;
+                    .img{
+                        font-size: 18*@hd;
+                    }
+                    .name{
+                        font-weight: bold;
                     }
                 }
             }

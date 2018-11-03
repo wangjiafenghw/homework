@@ -23,6 +23,7 @@
       list-style: none;
     }
   </style>
+  <link rel="stylesheet" href="./iconfont.css">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" lang="JavaScript">
     //计算屏幕比例并设置html的font-size
@@ -83,15 +84,15 @@
   <div class="wrap">
     <div class="top-bar">
       <span class="top-botton left">
-        Y
+        <i class="iconfont">&#xe601;</i>
       </span>
       <div class="title">北京-->上海</div>
       <span class="top-botton right">
-        X
+        <i class="iconfont">&#xe637;</i>
       </span>
     </div>
     <div class="content">
-      <div class="top-list">
+      <div class="top-list" id="topList">
         <div class="ul-box">
             <ul class="list-ul">
                 <li>
@@ -150,16 +151,100 @@
                                 <p class="price">￥443</p>
                               </div>
                             </li>
+                            <li>
+                              <div class="box">
+                                <p class="date">02-06</p>
+                                <p class="day">周几</p>
+                                <p class="price">￥443</p>
+                              </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                  <p class="date">02-06</p>
+                                  <p class="day">周几</p>
+                                  <p class="price">￥443</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="box">
+                                  <p class="date">02-06</p>
+                                  <p class="day">周几</p>
+                                  <p class="price">￥443</p>
+                                </div>
+                              </li>
+                              <li>
+                                  <div class="box">
+                                    <p class="date">02-06</p>
+                                    <p class="day">周几</p>
+                                    <p class="price">￥443</p>
+                                  </div>
+                                </li>
+                                
               </ul>
         </div>
         
         <div class="more-day">
-          <div class="cell"></div>
+          <div class="cell">
+            <div class="img">
+              <i class="iconfont">&#xe600;</i>
+            </div>
+            <div class="name">
+              更多日期
+            </div>
+          </div>
         </div>
       </div>
-      <div class="main-list">
+      <div class="main-list" id="main">
         <ul id="mainList">
           <!-- lilili -->
+          <li>
+            <div class="box">
+              <div class="left">
+                <div class="top">
+                  <div class="from">
+                    <span class="time">07:10</span>
+                    <span class="location">首都T1</span>
+                  </div>
+                  <div class="to">
+                    <span class="time">09:20</span>
+                    <span class="location">浦东T2</span>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <p class="desc">海航HU7611 波音787(大)</p>
+                </div>
+              </div>
+              <div class="right">
+                <p class="price">￥590</p>
+                <p class="desc">经济舱4.8折</p>
+                <p class="tips">持续涨价中</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <div class="left">
+                <div class="top">
+                  <div class="from">
+                    <span class="time">07:10</span>
+                    <span class="location">首都T1</span>
+                  </div>
+                  <div class="to">
+                    <span class="time">09:20</span>
+                    <span class="location">浦东T2</span>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <p class="desc">海航HU7611 波音787(大)</p>
+                </div>
+              </div>
+              <div class="right">
+                <p class="price">￥590</p>
+                <p class="desc">经济舱4.8折</p>
+                <p class="tips">持续涨价中</p>
+              </div>
+            </div>
+          </li>
           <li>
             <div class="box">
               <div class="left">
@@ -354,11 +439,53 @@
                         </li>
         </ul>
       </div>
-      <div class="bottom-list">
-
+      <div class="bottom-list" id="bottomList">
+        <ul class="bottom-bar">
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe69a;</i>
+              </div>
+              <div class="name">
+                筛选
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe62a;</i>
+              </div>
+              <div class="name">
+                排序
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe619;</i>
+              </div>
+              <div class="name">
+                时间
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe638;</i>
+              </div>
+              <div class="name">
+                价格
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+  <script src="./index.js"></script>
 </body>
 
 </html>
