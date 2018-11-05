@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1, shrink-to-fit=no,user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Hello, World</title>
+  <style type="text/css">
+    html {
+      height: 100%
+    }
+
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+    div, ul, li, p, img{
+      margin: 0;
+      padding: 0;
+    }
+    ul, li{
+      list-style: none;
+    }
+  </style>
+  <link rel="stylesheet" href="./iconfont.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" lang="JavaScript">
+    //计算屏幕比例并设置html的font-size
+    /**
+      将html字号设置为10个设计像素（一个基准系数，即rem为10 设计稿像素）
+
+      设计一个缩放系数，以应对可能出现的适配高清屏要求
+      
+    */
+    (function () {
+
+      /**初始化方法
+       * _standard 设计稿对应的分辨率
+       * base_DPR 设定最小DPR值
+       */
+
+      function setInitialRem(_standard, base_DPR) {
+
+        //取得当前设备DPR
+        var dpr = window.devicePixelRatio || 1;
+
+        //如果设定了默认最小DPR值
+        if (base_DPR) {
+          dpr = dpr >= base_DPR ? dpr : base_DPR;
+        }
+
+        //设定缩放视图比例 
+        var scale = 1 / dpr;
+        //设直视图缩放比例
+        document.head.querySelector('meta[name="viewport"]').content = "width=device-width,initial-scale=" + scale +
+          ",minimum-scale=" + scale + ",maximum-scale=" + scale + ",user-scalable=no, shrink-to-fit=no";
+
+        //取得当前设备宽度
+        var device_width = document.documentElement.clientWidth; //window.innerWidth;
+        //标定原稿设计基准值 当前稿件设计宽度为 iPhone6/6s 375像素
+        var standard_width = _standard * dpr;
+        //设定基准单位
+        var base_value = 10;
+        //基准系数=设备宽度➗稿件基准宽度✖️设备DPR✖️10
+        var rem = device_width / standard_width * dpr * base_value;
+        //设置 REM 
+        document.documentElement.style.fontSize = rem + "px";
+
+
+      }
+
+      window.addEventListener("resize", function () {
+        window.location.reload();
+        setInitialRem(375, 1);
+      });
+
+      setInitialRem(375, 1)
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top-bar">
+      <span class="top-botton left">
+        <i class="iconfont">&#xe601;</i>
+      </span>
+      <div class="title">北京-->上海</div>
+      <span class="top-botton right">
+        <i class="iconfont">&#xe637;</i>
+      </span>
+    </div>
+    <div class="content">
+      <div class="top-list on" id="topList">
+        <div class="ul-box">
+            <ul class="list-ul" id="dateList">
+                <li>
+                  <div class="box">
+                    <p class="date">02-06</p>
+                    <p class="day">周几</p>
+                    <p class="price">￥443</p>
+                  </div>
+                </li>
+              </ul>
+        </div>
+        
+        <div class="more-day">
+          <div class="cell">
+            <div class="img">
+              <i class="iconfont">&#xe600;</i>
+            </div>
+            <div class="name">
+              更多日期
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-list on" id="main">
+        <ul id="mainList">
+          
+        </ul>
+      </div>
+      <div class="bottom-list on" id="bottomList">
+        <ul class="bottom-bar">
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe69a;</i>
+              </div>
+              <div class="name">
+                筛选
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe62a;</i>
+              </div>
+              <div class="name">
+                排序
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe619;</i>
+              </div>
+              <div class="name">
+                时间
+              </div>
+            </div>
+          </li>
+          <li class="btn-bottom">
+            <div class="box">
+              <div class="img">
+                <i class="iconfont">&#xe638;</i>
+              </div>
+              <div class="name">
+                价格
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="btn-gotop" id="btnGoTop" onclick="goTop()">
+    <i class="iconfont">&#xe63c;</i>
+    <p>顶部</p>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

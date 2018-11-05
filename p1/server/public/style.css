@@ -35,7 +35,8 @@
 .wrap > .content {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+  overflow-y: scroll;
 }
 .wrap > .content .top-list {
   position: fixed;
@@ -102,9 +103,8 @@
   font-size: 2.4rem;
 }
 .wrap > .content .main-list {
-  overflow-y: scroll;
   padding: 0rem 0;
-  -webkit-transition: padding 0.5s 0.3s;
+  -webkit-transition: padding 0.5s;
 }
 .wrap > .content .main-list.on {
   padding: 7rem 0;
@@ -199,4 +199,25 @@
 }
 .wrap .bottom-list .bottom-bar .btn-bottom .box .name {
   font-weight: bold;
+}
+.btn-gotop {
+  position: fixed;
+  right: 4rem;
+  bottom: 10rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.btn-gotop.on {
+  display: none;
+}
+.btn-gotop .iconfont {
+  color: #aaa;
+}
+.btn-gotop p {
+  color: #aaa;
+  font-size: 1rem;
 }

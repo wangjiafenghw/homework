@@ -1,0 +1,157 @@
+{
+    "dateList": [
+        {
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        },{
+            "date": "02-06",
+            "day": "周一",
+            "min_price": "￥443"
+        }
+    ],
+    "list": {
+        "date": "02-06",
+        "day": "周一",
+        "min_price": "￥443",
+        "tickets": [
+            {
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": ""
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": ""
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": ""
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": ""
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": ""
+            },{
+                "from_time": "07:10",
+                "from_location": "首都T1",
+                "to_time": "09:20",
+                "to_location": "浦东T2",
+                "desc": "海航HU7611 波音787(大)",
+                "price": "￥590",
+                "price_desc": "经济舱4.8折",
+                "tips": "持续涨价中"
+            }
+        ]
+    }
+}
