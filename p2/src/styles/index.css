@@ -1,0 +1,135 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 0;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: #f5f5f5;
+}
+#app .container {
+  text-align: center;
+  margin: 50px 20vw;
+  padding: 20px 0;
+  height: 100%;
+  border-radius: 5px;
+}
+#app .container .dialog {
+  text-align: left;
+  margin: 0 5%;
+  padding: 30px 0;
+}
+#app .container .dialog div {
+  overflow: hidden;
+}
+#app .container ul {
+  text-align: left;
+  margin: 20px 5%;
+  border-radius: 5px;
+  border: 1px #bbb solid;
+}
+#app .container ul li {
+  list-style: none;
+  line-height: 50px;
+  border-bottom: 1px #bbb solid;
+  padding: 0 20px;
+  background-color: #fff;
+}
+#app .container ul li:hover > .delete-btn {
+  display: block;
+}
+#app .container ul li .name {
+  font-size: 18px;
+}
+#app .container ul li.isChecked {
+  background-color: #dbf7d5;
+}
+#app .container ul li.isChecked .name {
+  color: #61893A;
+  text-decoration: line-through;
+}
+#app .container ul li:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#app .container ul li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#app .container .label {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#app .container input[type="text"] {
+  line-height: 40px;
+  float: right;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  border: 1px #ccc solid;
+  outline: none;
+  box-shadow: 0 0 10px #ccc;
+}
+#app .container input[type="button"] {
+  margin-top: 20px;
+  border: none;
+  background-color: #4164ba;
+  height: 40px;
+  width: 110px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  float: right;
+}
+#app .container input[type="checkbox"] {
+  border: 0;
+  color: #fff;
+  background-color: #A1EAFB;
+}
+#app .container .delete-btn {
+  color: #ccc;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+#app .container .check-btn {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  border: 1px #ccc solid;
+  border-style: outset;
+  border-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#app .container .check-btn.isChecked {
+  background-color: #566bff;
+}
