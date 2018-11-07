@@ -50,7 +50,7 @@ class TableView extends React.Component {
       url: 'https://randomuser.me/api',
       method: 'get',
       data: {
-        results: 10,
+        results: 5,
         ...params,
       },
       type: 'json',
@@ -74,6 +74,7 @@ class TableView extends React.Component {
   render() {
     return (
       <Table
+        className="table"
         columns={columns}
         rowKey={record => record.login.uuid}
         dataSource={this.state.data}

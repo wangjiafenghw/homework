@@ -1,7 +1,12 @@
 @charset "utf-8";
 @import '~antd/dist/antd.css';
+html,
 body {
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow: auto;
   font-size: 16px;
 }
 #app {
@@ -17,4 +22,19 @@ h1 {
 a {
   display: block;
   color: #2891e0;
+}
+.wrapper {
+  margin: 100px auto;
+  width: 1000px;
+  height: 100%;
+}
+.wrapper .dialog {
+  text-align: left;
+}
+.wrapper .dialog input {
+  width: 50%;
+  margin-right: 50px;
+}
+.wrapper .table {
+  margin-top: 20px;
 }

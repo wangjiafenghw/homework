@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Table from './Table';
+import Dialog from './Dialog';
 
 class App extends React.Component {
     render() {
         return (
             <div className="wrapper">
-                < Table / >
+                <Dialog />
+                <Table />
             </div>
         )
     }
