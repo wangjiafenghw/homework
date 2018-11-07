@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ykit-config-react": "^2.3.2"
+    "antd": "^3.10.4",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "reqwest": "^2.0.5",
+    "ykit-config-antd": "^2.3.0"
   }
 }

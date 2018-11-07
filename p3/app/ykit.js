@@ -1,16 +1,12 @@
 module.exports = {
-    plugins: ['react'],
+    plugins: ['antd'],
     config: {
         exports: [
-            './scripts/index.js',
+            ['babel-polyfill', './scripts/index.js'],
             './styles/index.css'
         ],
         modifyWebpackConfig: function(baseConfig) {
-            // edit ykit's Webpack configs
-
             return baseConfig;
         }
-    },
-    hooks: {},
-    commands: []
+    }
 };
