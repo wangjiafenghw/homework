@@ -1,33 +1,41 @@
 const read = require('node-read');
 
-const Read = {};
+const Read = {}, data = {};
+
+module.exports = Read;
 Read.read = (url, callback)=>{
-    read('http://www.sohu.com/a/273872036_428290?g=0?code=4b19151f80004169d3887b9a7c3ff443&_f=index_cpc_0', function(err, article, res) {
-        let res = {};
-        res.article = article.content.replace(/<[^>]*>/g, "");
-        res.num_total = .replace(/\s/g, "").length;
-        res.num_
+    read(url, (err, article, res)=> {
+        if(err) return callback(err, null) //错误返回
+        data.title = article.title;
+
+        data.article = article.content.replace(/<[^>]*>/g, "");
+
+        // * 总数
+        data.num_total = data.article.replace(/\s/g, "").length?data.article.replace(/\s/g, "").length:0;
+
+        // * 中文数
+        data.num_zh = patch(data.article, '[\u4E00-\u9FA5]');
 
 
-
-        // Main Article.
-        console.log(article.content.replace(/<[^>]*>/g, "")+"/n=========================>");
-            
-        // Title
-        console.log(article.title);
-
-        // HTML 
-        console.log(article.content.replace(/<[^>]*>/g, "").replace(/\s/g, "").length+"/n=========================>");
+        // * 英文数
+        let article_no_zh_arr = data.article.replace(/[\u4E00-\u9FA5]/g, ' ').split(' ');
+                // 把每个单词标点符号去掉
+        let wordsArr = article_no_zh_arr.map(function (item) {
+            return item.match(/\w*/)[0]
+        });
+        data.num_en = wordsArr?wordsArr.length:0;
         
-        // DOM
-        console.log(article.dom);
-        callback()
-    
+        // * 标点(中英)
+        var reg_pun = "[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]";
+        data.num_pun = patch(data.article, reg_pun)
+        callback(null, data)
+
     });
     function patch(s, re) {
         re = eval("/" + re + "/ig")
         return s.match(re) ? s.match(re).length : 0;
     }
 }
+// Read.read('https://www.yahoo.com/news/white-house-revokes-cnn-reporter-010642951.html',()=>{})
 
 
