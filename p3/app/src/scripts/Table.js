@@ -42,7 +42,7 @@ class TableView extends React.Component {
   fetch = (params = {}) => {
     this.setState({ loading: true });
     reqwest({
-      url: 'http://localhost:3000/getDataPagination',
+      url: './getDataPagination',
       method: 'get',
       data: {
         len: 5,

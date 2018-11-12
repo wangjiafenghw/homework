@@ -31958,7 +31958,7 @@
 	
 	      _this.setState({ loading: true });
 	      (0, _reqwest2.default)({
-	        url: 'http://localhost:3000/getDataPagination',
+	        url: './getDataPagination',
 	        method: 'get',
 	        data: _extends({
 	          len: 5,
