@@ -3,22 +3,20 @@ import { Table } from 'antd';
 import reqwest from 'reqwest';
 
 const columns = [{
-  title: 'Name',
-  dataIndex: 'name',
-  sorter: true,
-  render: name => `${name.first} ${name.last}`,
-  width: '20%',
-}, {
-  title: 'Gender',
-  dataIndex: 'gender',
-  filters: [
-    { text: 'Male', value: 'male' },
-    { text: 'Female', value: 'female' },
-  ],
-  width: '20%',
-}, {
-  title: 'Email',
-  dataIndex: 'email',
+  title: '标题',
+  dataIndex: 'TITLE',
+},{
+  title: '总字数',
+  dataIndex: 'NUM_TOTAL',
+},{
+  title: '中文字数',
+  dataIndex: 'NUM_ZH',
+},{
+  title: '英文字数',
+  dataIndex: 'NUM_EN',
+},{
+  title: '标点符号数',
+  dataIndex: 'NUM_PUN',
 }];
 
 class TableView extends React.Component {
@@ -44,16 +42,16 @@ class TableView extends React.Component {
   }
 
   fetch = (params = {}) => {
-    console.log('params:', params);
     this.setState({ loading: true });
+    
     reqwest({
-      url: 'https://randomuser.me/api',
+      url: 'http://localhost:3000/getDataPagination',
       method: 'get',
       data: {
-        results: 5,
+        len: 5,
+        begin: 0,
         ...params,
-      },
-      type: 'json',
+      }
     }).then((data) => {
       const pagination = { ...this.state.pagination };
       // Read total count from server
@@ -61,9 +59,10 @@ class TableView extends React.Component {
       pagination.total = 200;
       this.setState({
         loading: false,
-        data: data.results,
+        data: data.data,
         pagination,
       });
+      console.log('data->', data)
     });
   }
 
@@ -76,7 +75,6 @@ class TableView extends React.Component {
       <Table
         className="table"
         columns={columns}
-        rowKey={record => record.login.uuid}
         dataSource={this.state.data}
         pagination={this.state.pagination}
         loading={this.state.loading}

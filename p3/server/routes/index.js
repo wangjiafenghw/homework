@@ -67,7 +67,8 @@ router.get('/getArticle', (req, res)=> {
 router.get('/getDataPagination', (req, res)=>{
   let begin = req.query.begin;
   let len = req.query.len;
-  let sql = `SELECT 
+  let sql = `SELECT
+            ID, 
             URL,
             TITLE,
             NUM_ZH,
