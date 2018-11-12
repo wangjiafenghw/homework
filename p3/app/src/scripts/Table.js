@@ -22,28 +22,25 @@ const columns = [{
 class TableView extends React.Component {
   state = {
     data: [],
-    pagination: {},
+    pagination: {pageSize:5},
     loading: false,
   };
 
-  handleTableChange = (pagination, filters, sorter) => {
+  handleTableChange = (pagination, filters) => {
     const pager = { ...this.state.pagination };
     pager.current = pagination.current;
     this.setState({
       pagination: pager,
     });
     this.fetch({
-      results: pagination.pageSize,
-      page: pagination.current,
-      sortField: sorter.field,
-      sortOrder: sorter.order,
+      len: pagination.pageSize,
+      begin: (pagination.current - 1) * pagination.pageSize,
       ...filters,
     });
   }
 
   fetch = (params = {}) => {
     this.setState({ loading: true });
-    
     reqwest({
       url: 'http://localhost:3000/getDataPagination',
       method: 'get',
@@ -56,7 +53,8 @@ class TableView extends React.Component {
       const pagination = { ...this.state.pagination };
       // Read total count from server
       // pagination.total = data.totalCount;
-      pagination.total = 200;
+      console.log(data.data)
+      pagination.total = data.data[0].total;
       this.setState({
         loading: false,
         data: data.data,
