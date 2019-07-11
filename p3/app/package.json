@@ -4,6 +4,7 @@
   "description": "ykit starter",
   "main": "index.js",
   "scripts": {
+    "start": "ykit s -p 3001",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
