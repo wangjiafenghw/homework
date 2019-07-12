@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 class Dialog extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick () {
+	handleClick() {
 		var len = this.props.nums;
 		var newid = len > 0 ? len : 0;
 		var value = this.refs.myText.value;
@@ -22,19 +22,25 @@ class Dialog extends Component {
 		}
 	}
 
-	render () {
+	handleEnterKey = (e) => {
+		if (e.nativeEvent.keyCode === 13) { //判断按键是否为enter
+			this.handleClick()
+		}
+	}
+
+	render() {
 		return (
-			
+
 			<div className="dialog">
 				<div>
 					<span className="label">Task</span>
-					<input type="text" ref="myText" placeholder="你想做点什么"/>
+					<input type="text" ref="myText" placeholder="你想做点什么" onKeyPress={this.handleEnterKey} />
 				</div>
 				<div>
-					<input type="button" value="Save Task" onClick={this.handleClick}/>
+					<input type="button" value="Save Task" onClick={this.handleClick} />
 				</div>
 			</div>
-			
+
 		);
 	}
 }
