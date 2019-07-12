@@ -30,10 +30,14 @@ div {
 }
 #app .container {
   text-align: center;
-  margin: 50px 20vw;
+  margin: 0px 20vw;
   padding: 20px 0;
   height: 100%;
   border-radius: 5px;
+}
+#app .container .title {
+  font-weight: 900;
+  font-size: 40px;
 }
 #app .container .dialog {
   text-align: left;
@@ -131,5 +135,7 @@ div {
   cursor: pointer;
 }
 #app .container .check-btn.isChecked {
+  background: url("/images/duihao.png") no-repeat 0 0;
+  background-size: 100% 100%;
   background-color: #566bff;
 }

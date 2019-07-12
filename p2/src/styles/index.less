@@ -36,10 +36,14 @@ div{
     background-color: @container_bg;
     .container{
       text-align: center;
-      margin: 50px 20vw;
+      margin: 0px 20vw;
       padding: 20px 0;
       height: 100%;
       border-radius: 5px;
+      .title{
+        font-weight: 900;
+        font-size: 40px;
+      }
       .dialog {
         text-align: left;
         margin: 0 5%;
@@ -141,6 +145,9 @@ div{
         cursor: pointer;
         &.isChecked{
 
+          
+          background: url("/images/duihao.png") no-repeat 0 0;
+          background-size: 100% 100%;
           background-color: #566bff;
         }
       }

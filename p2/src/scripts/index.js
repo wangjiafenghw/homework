@@ -11,19 +11,19 @@ class TodoList extends Component {
 		this.state = {
 			list: [{
 				id: 0,
-				name: '吃饭',
+				name: '你瞅啥',
 				status: 1
 			}, {
 				id: 1,
-				name: '打豆豆',
+				name: '瞅你咋的',
 				status: 1
 			}, {
 				id: 2,
-				name: '回家',
+				name: '再瞅一个试试',
 				status : 0
 			}, {
 				id: 3,
-				name: '睡觉',
+				name: '试试就试试',
 				status : 0
 			}],
 			finished: 2
@@ -72,7 +72,7 @@ class TodoList extends Component {
 	render () {
 		return (
 			<div className="container">
-				<h1>TodoList</h1>
+				<h1 className="title">React Todo</h1>
 				<ul className="list-ul">
 					{ this.state.list.map ((item, index) =>
 						<ListItem 
