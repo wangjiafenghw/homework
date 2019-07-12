@@ -1,11 +1,12 @@
-# ykit-starter-react
-YKit-React 示例工程
+# 作业2 React Todo
+基于ykit-starter-react模板搭建
 
 ## Getting Started
 ```
-$ git clone https://github.com/roscoe054/ykit-starter-react.git
-$ cd ykit-starter-react
-$ npm install 或者 yarn
+$ git clone git@github.com:wangjiafenghw/homework.git
+$ cd homework
+$ cd p2
+$ yarn
 ```
 
 ## Run Dev
