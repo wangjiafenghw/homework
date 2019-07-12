@@ -6,21 +6,35 @@ class Dialog extends Component{
     constructor(props){
         super()
         this.state = {
-            _url: ''
+            _url: '',
+            loading: false,
+            disabled: false
         }
     }
-    handleGetArticle(){
-        this.setState({ loading: true });
+    handleGetArticle() {
+        this.fetch({
+            url: this.state._url
+        })
+    }
+    fetch = (params = {}) => {
+        this.setState({ 
+            loading: true, 
+            disabled: true
+        });
         reqwest({
             url: 'http://localhost:3000/getArticle',
             method: 'get',
             data: {
-                url: this.state._url 
+                ...params
             }
-        }).then(()=>{
-            this.setState({ loading: false });
+        }).then(() => {
+            this.setState({ 
+                loading: false,
+                disabled: false 
+            });
         })
     }
+
     handleUrl(e){
         let value = e.target.value;
         this.setState({
@@ -30,8 +44,8 @@ class Dialog extends Component{
     render(){
         return(
             <div className="dialog">
-                <Input placeholder="输入文章链接" value={this.state._url} onChange={this.handleUrl.bind(this)} />
-                <Button type="primary" onClick={this.handleGetArticle.bind(this)}>添加</Button>
+                <Input placeholder="输入文章链接" disabled={this.state.disabled} value={this.state._url} onChange={this.handleUrl.bind(this)} />
+                <Button type="primary" loading={this.state.loading} onClick={this.handleGetArticle.bind(this)}>添加</Button>
             </div>
         )
     }
