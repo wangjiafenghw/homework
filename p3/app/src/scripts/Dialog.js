@@ -22,7 +22,7 @@ class Dialog extends Component{
             disabled: true
         });
         reqwest({
-            url: 'http://localhost:3000/getArticle',
+            url: '/getArticle',
             method: 'get',
             data: {
                 ...params
