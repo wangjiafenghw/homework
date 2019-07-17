@@ -11,13 +11,13 @@ class Dialog extends Component{
             disabled: false
         }
     }
-    handleGetArticle() {
+    handleGetArticle() {     // 提交链接
         this.fetch({
             url: this.state._url
         })
     }
     fetch = (params = {}) => {
-        this.setState({ 
+        this.setState({      //锁定输入框和按钮
             loading: true, 
             disabled: true
         });
