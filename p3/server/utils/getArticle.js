@@ -1,8 +1,18 @@
+/*
+ * @Description: 获取文章信息模块，入参：路径，回调函数
+ * @Author: jiafengf.wang
+ * @Date: 2019-07-18 09:17:06
+ * @LastEditTime: 2019-07-18 09:22:47
+ * @LastEditors: Please set LastEditors
+ */
 const read = require('node-read');
 
 const Read = {}, data = {};
 
 module.exports = Read;
+
+
+
 Read.read = (url, callback)=>{
     read(url, (err, article, res)=> {
         if(err) return callback(err, null) //错误返回
